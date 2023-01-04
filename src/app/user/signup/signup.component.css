@@ -1,0 +1,14 @@
+.row{
+    
+    margin: 0 auto;
+}
+
+/* .container{
+    height: 50%;
+    width: 40%;
+    
+} */
+
+.error_text{
+    color: brown;
+}

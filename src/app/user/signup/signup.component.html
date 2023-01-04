@@ -1,0 +1,70 @@
+<!-- <div class="row">
+    <div class="col s8 offset-s2">
+        <div class="card">
+            <div class="sm-jumbotron center-align">
+                <h3>Registration</h3> -->
+                <form  [formGroup]="signUpForm" (ngSubmit)="signUp()"   >
+                    <div class="input-field col s12">
+                        <input formControlName="name"   type="text" class="validate">
+                        <label for="first_name">User Name</label>
+                        <div class="error_text" *ngIf="!signUpForm?.get('name')?.valid && signUpForm?.get('name')?.touched">
+                             User name required 
+                        </div>
+                        <div class="error_text">
+                            {{wrongName}}
+                        </div>
+                    </div>
+                    <div class="input-field col s12">
+                        <input formControlName="email"  type="text" class="validate">
+                        <label for="first_name">Email</label>
+                        <div class="error_text" *ngIf="!signUpForm?.get('email')?.valid && signUpForm?.get('email')?.touched">
+                            Invalid email address
+                            
+                        </div>
+                        <div class="error_text">
+                            {{wrongEmail}}
+                        </div>
+                    </div>
+                    <div class="input-field col s12">
+                        <input formControlName="dateOfBirth"  type="date" class="validate">
+                        <label for="first_name">Birth Of Date</label>
+                        <div class="error_text" *ngIf="signUpForm?.get('dateOfBirth')?.touched && f?.dateOfBirth?.errors?.IS18" >
+                            Must be of 18 years or older.
+                        </div>
+                    </div>
+                    <div class="input-field col s6">
+                        <input formControlName="password" type="password" class="validate">
+                        <label for="first_name">password</label>
+                       
+                        <div class="error_text" *ngIf="!signUpForm?.get('password')?.valid && signUpForm?.get('password')?.touched ">
+                            Password must contain more than 8 characters, 1 upper case letter, and 1 special character.
+                        </div> 
+                    </div>
+                    <div class="input-field col s6">
+                        <input formControlName="confirmPassword"  type="password" class="validate">
+                        <label for="first_name">Confirm password</label>
+                        <div class="error_text" *ngIf="f?.confirmPassword?.errors?.mustMatch && signUpForm?.get('confirmPassword')?.touched">
+                            Passwords don't match.
+                        </div>
+                    </div>
+                    
+                        <div class="input-field col s8">
+                            <button class="btn-large btn-submit" type="submit" [disabled]="!signUpForm.valid"> Submit</button>
+
+                        </div>
+
+                    
+                </form>
+                <div class="row">
+                    <div class="input-field col s8">
+                        <hr>
+
+                    </div>
+
+                </div>
+                
+            <!-- </div>
+        </div>
+    </div>
+
+</div> -->

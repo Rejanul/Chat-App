@@ -1,0 +1,55 @@
+
+<div class="container">
+    <div class="title">
+        <h2>DragonRiders</h2>
+    </div>
+    <mat-form-field appearance="fill">
+        <mat-label>Select items per page</mat-label>
+        <mat-select [(value)]="ItemPerPage">
+          <mat-option>None</mat-option>
+          <mat-option value="5" (click)="getUser(5,pageNumber)">5</mat-option>
+          <mat-option value="10" (click)="getUser(10,pageNumber)">10</mat-option>
+          <mat-option value="15" (click)="getUser(15,pageNumber)">15</mat-option>
+        </mat-select>
+      </mat-form-field>
+      
+      <p>Items per page: {{ItemPerPage}}</p>
+    <div class="text-center"><h1>Data Table</h1></div>
+<div class="error_text" *ngIf="!haveData">No Data Avilable</div>
+  <table class="table table-striped">
+    <thead class="thead-dark">
+      <tr>
+        
+        <th scope="col">User name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Date Of birth</th>
+        <th scope="col">Action</th>
+        
+      </tr>
+    </thead>
+    <tbody >
+      <tr *ngFor="let user of users | paginate: { itemsPerPage:ItemPerPage, currentPage: pageNumber ,totalItems:total}">
+        <!-- <th scope="row">{{user.id}}</th> -->
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.dateOfBirth|date}}</td>
+        
+        <td>
+          <button mat-icon-button color="primary" (click)="openEdit(user)">
+            <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button color="warn" (click)="deleteData(user)">
+            <mat-icon>delete</mat-icon>
+        </button>
+        
+        </td>
+      </tr>
+      
+      
+    </tbody>
+  </table>
+   <pagination-controls 
+   [responsive]="true"
+   (pageChange)="pageChangeEvent($event)"
+   ></pagination-controls> 
+</div>

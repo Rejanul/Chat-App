@@ -1,0 +1,74 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+.cover-img{
+    z-index: 900;
+  }
+  .profile-img{
+    margin-top: -14%;
+  width: 100%;
+  
+  
+  }
+  .z-depth-3{
+  
+  }
+  .profile-meta{
+  position: relative;
+  
+  }
+  .profile-meta::after{
+  
+  }
+  .profile-name{
+  
+  width: 100%;
+  text-align: center;
+  }
+  .profile-id{
+  width: 100%;
+  text-align: center;
+  }
+  .profile-desc{
+  width: 100%;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  
+  }
+  .profile-stats{
+    padding-bottom: 10px;
+    text-align: center;
+  }
+  .profile-stats li{
+    display: inline;
+  }
+  .center-btn{
+  text-align: center;
+  }
+  .profile-btn{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  #profile-img{
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  #profile-id{
+  text-align: center;
+  }
+  #profile-name{
+  text-align: center;
+  }
+
+  .input.ng-invalid.ng-dirty{
+      border-bottom-color: red !important;
+      box-shadow: 0 ipx 0 0 red !important;
+
+  }
+  
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

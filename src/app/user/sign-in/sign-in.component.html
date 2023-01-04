@@ -1,0 +1,46 @@
+<!-- <div class="row">
+    <div class="col s8 offset-s2">
+        <div class="card">
+            <div class="sm-jumbotron center-align">
+                <h3>Registration</h3> -->
+                <form  [formGroup]="logInForm" (ngSubmit)="logIn()"   >
+                    <div class="input-field col s12">
+                        
+                        <input formControlName="name"   type="text" class="validate">
+                        
+                        <label for="first_name">User Name </label>
+                      
+                    </div>
+                    
+                    
+                    <div class="input-field col s12">
+                        <input formControlName="password" type="password" class="validate">
+                        <label for="first_name">password</label>
+                    
+                    </div>
+                   
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <button class="btn-large btn-submit" type="submit" [disabled]="!logInForm.valid"> Login</button>
+
+                        </div>
+
+                    </div>
+                    
+                </form>
+                <div class="row">
+                    <div class="input-field col s8">
+                        <div class="error_text">
+                            {{error}}
+                        </div>
+                        
+                        <hr>
+
+                    </div>
+                </div>
+                
+            <!-- </div>
+        </div>
+    </div>
+
+</div> -->
